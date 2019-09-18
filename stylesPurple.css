@@ -23,6 +23,10 @@ nav {
   background-color: var(--pr);
   border-bottom: 1px solid var(--ac);
 }
+a.link {
+  text-decoration: none;
+  color: white;
+}
 .logo,
 .title {
   font-weight: 200;
