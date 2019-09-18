@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+:root {
+  --text: white;
+  --bg: purple;
+
+  --pr: rgb(83, 35, 96);
+  --se: rgb(47, 22, 54);
+  --ac: rgb(233, 153, 255);
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav {
+  background-color: var(--pr);
+  border-bottom: 1px solid var(--ac);
+}
+.logo,
+.title {
+  font-weight: 200;
+}
+.nav {
+  /* background-color: rgb(34, 34, 34); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px; 
+}
+
+.nav-ul {
+  /* background-color: grey; */
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.nav-li {
+  /* background-color: #414141; */
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  border-bottom: 2px solid var(--pr);
+  transition-duration: 0.5s;
+  transition-property: border;
+}
+.nav-li:hover {
+  /* color: var(--pr); */
+  border-color: var(--ac);
+}
+.lang > :first-child,
+.nav-ul > :first-child {
+  color: var(--ac);
+}
+
+/* HERO */
+.hero {
+  background: var(--pr);
+  background: linear-gradient(
+    -6deg,
+    var(--bg) 0%,
+    var(--pr) 90%
+  );
+
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 92%,
+    78% 78%,
+    54% 82%,
+    35% 95%,
+    16% 89%,
+    0 100%
+  );
+
+  position: relative;
+}
+.hero-tx {
+  padding: 0px 20px;
+}
+.heroOne {
+  background: var(--pr);
+  background: linear-gradient(
+    -6deg,
+    var(--bg) 10%,
+    var(--ac) 90%
+  );
+}
+
+/* SECTIONS */
+.one,
+.two {
+  background-color: var(--se);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.one > :first-child,
+.two > :first-child {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.one {
+  clip-path: polygon(
+    calc(100% - 97vw) 2vw,
+    100% 0,
+    100% 100%,
+    2vw calc(100% - 2vw)
+  );
+}
+
+.two {
+  clip-path: polygon(0 0, calc(100% - 2vw) 2vw, 97vw calc(100% - 2vw), 0 100%);
+}
+
+.three {
+  min-height: 300px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.three-tx {
+  background-color: var(--se);
+  padding: 30px 0;
+}
+.title-flex {
+  margin-bottom: 20px;
+
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  gap: 5px;
+}
+.title-flex > p {
+  border: 2px solid var(--pr);
+  padding: 9px 20px;
+  font-size: 16px;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 100px;
+  z-index: -1;
+  background: var(--pr);
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 800px;
+  color: white;
+  text-align: center;
+}
+footer {
+  height: 300px;
+  background-color: var(--pr);
+  border-top: 1px solid var(--text);
+  display: grid;
+  place-items: center;
+  /* margin-top: 100px; */
+}
+
+@media (max-width: 700px) {
+  .nav-ul {
+    display: none;
+  }
+  .title-flex {
+    grid-auto-flow: row;
+  }
+}
+@media (min-width: 1200px) {
+  .one {
+    clip-path: polygon(
+      calc(100% - 90vw) 2vw,
+      100% 0,
+      100% 100%,
+      9vw calc(100% - 2vw)
+    );
+  }
+  .two {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 10vw) 3vw,
+      89vw calc(100% - 2vw),
+      0 100%
+    );
+  }
+}
