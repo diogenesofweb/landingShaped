@@ -58,8 +58,8 @@ a.link {
   /* color: var(--pr); */
   border-color: var(--ac);
 }
-.lang > :first-child,
-.nav-ul > :first-child {
+.lang > :last-child,
+.nav-ul > :last-child > a {
   color: var(--ac);
 }
 

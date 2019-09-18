@@ -11,6 +11,10 @@ body {
   font-size: 18px;
   overflow-x: hidden;
 }
+.cont{
+  overflow-x: hidden;
+  max-width: 100%;
+}
 a.link {
   text-decoration: none;
   color: white;
@@ -56,7 +60,7 @@ nav {
   border-color: var(--pr);
 }
 .lang > :first-child,
-.nav-ul > :first-child {
+.nav-ul > :first-child > a {
   color: var(--pr);
 }
 
