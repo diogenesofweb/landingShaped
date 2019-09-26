@@ -204,4 +204,13 @@ footer {
       0 100%
     );
   }
+  .mt1{
+    margin-top: 15px;
+  }
+  .mt2{
+    margin-top: 35px;
+  }
+  .mt3{
+    margin-top: 55px;
+  }
 }

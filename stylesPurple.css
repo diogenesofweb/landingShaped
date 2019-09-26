@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap'); */
+/* font-family: 'Playfair Display', serif; */
 :root {
   --text: white;
   --bg: purple;
 
   --pr: rgb(83, 35, 96);
   --se: rgb(47, 22, 54);
-  --ac: rgb(233, 153, 255);
+  --ac: rgb(237, 174, 255);
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -14,11 +19,31 @@ body {
   font-size: 18px;
   overflow-x: hidden;
 }
-
+.pfd{
+  font-family: 'Playfair Display', serif;
+}
+.title-pfd{
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+}
+.span-title{
+  color: var(--ac)
+}
+/* .level{
+  z-index: 100;
+} */
+.cont{
+  overflow-x: hidden;
+  max-width: 100%;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* NavBar */
 nav {
   background-color: var(--pr);
   border-bottom: 1px solid var(--ac);
@@ -27,14 +52,17 @@ a.link {
   text-decoration: none;
   color: white;
 }
-.logo,
 .title {
   font-weight: 200;
+}
+.logo {
+  font-weight: 100;
+  flex-grow: 1;
 }
 .nav {
   /* background-color: rgb(34, 34, 34); */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 0 25px; 
 }
@@ -44,6 +72,7 @@ a.link {
   display: flex;
   list-style: none;
   padding: 0;
+  margin-right: 50px;
 }
 .nav-li {
   /* background-color: #414141; */
@@ -142,6 +171,7 @@ a.link {
 }
 .title-flex {
   margin-bottom: 20px;
+  padding: 0 15px;
 
   display: grid;
   grid-auto-flow: column;
@@ -181,6 +211,20 @@ footer {
   }
   .title-flex {
     grid-auto-flow: row;
+  }
+}
+@media (min-width: 701px) {
+  .mt1{
+    margin-top: 20px;
+    border-top: 3px solid gold !important;
+  }
+  .mt2{
+    margin-top: 40px;
+    border-top: 3px solid silver !important;
+  }
+  .mt3{
+    margin-top: 60px;
+    border-top: 3px solid #CD7F32 !important;
   }
 }
 @media (min-width: 1200px) {
