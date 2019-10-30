@@ -8,7 +8,7 @@
   --text: white;
   --bg: purple;
 
-  --pr: rgb(83, 35, 96);
+  --pr: rgb(98, 40, 114);
   --se: rgb(47, 22, 54);
   --ac: rgb(237, 174, 255);
 }
@@ -45,7 +45,7 @@ body {
 
 /* NavBar */
 nav {
-  background-color: var(--pr);
+  background-color: var(--se);
   border-bottom: 1px solid var(--ac);
 }
 a.link {
@@ -79,7 +79,7 @@ a.link {
   cursor: pointer;
   display: flex;
   padding: 10px;
-  border-bottom: 2px solid var(--pr);
+  border-bottom: 2px solid var(--se);
   transition-duration: 0.5s;
   transition-property: border;
 }
@@ -97,8 +97,8 @@ a.link {
   background: var(--pr);
   background: linear-gradient(
     -6deg,
-    var(--bg) 0%,
-    var(--pr) 90%
+    var(--pr) 0%,
+    var(--se) 90%
   );
 
   min-height: calc(100vh - 80px);
@@ -126,7 +126,7 @@ a.link {
   background: linear-gradient(
     -6deg,
     var(--bg) 10%,
-    var(--ac) 90%
+    var(--ac) 50%
   );
 }
 
