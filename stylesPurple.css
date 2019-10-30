@@ -8,7 +8,7 @@
   --text: white;
   --bg: purple;
 
-  --pr: rgb(98, 40, 114);
+  --pr: rgb(143, 22, 143);
   --se: rgb(47, 22, 54);
   --ac: rgb(237, 174, 255);
 }
@@ -188,17 +188,17 @@ a.link {
   position: sticky;
   bottom: 100px;
   z-index: -1;
-  background: var(--pr);
+  background: var(--bg);
   padding: 1em;
   margin: 0 auto;
   margin-top: 30px;
   max-width: 800px;
-  color: white;
+  /* color: var(--ac); */
   text-align: center;
 }
 footer {
   height: 300px;
-  background-color: var(--pr);
+  background-color: var(--se);
   border-top: 1px solid var(--text);
   display: grid;
   place-items: center;
