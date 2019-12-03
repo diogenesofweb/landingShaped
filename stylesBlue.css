@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap'); */
+/* font-family: 'Playfair Display', serif; */
+:root {
+  /* --text: white;
+  --bg: purple;
+
+  --pr: rgb(143, 22, 143);
+  --se: rgb(47, 22, 54);
+  --ac: rgb(237, 174, 255); */
+
+  --text1: hsl(0, 0%, 0%);
+  --text2: hsl(0, 0%, 12%);
+  --text3: hsl(0, 0%, 24%);
+
+  --bg1: hsl(0, 0%, 100%);
+  --bg2: hsl(0, 0%, 96%);
+  --bg3: hsl(0, 0%, 82%);
+
+  --pr1: lightblue;
+  --pr2: #0000ff;
+  --pr3: darkblue;
+
+  --se1: #76adbf;
+  --se2: #248aa3;
+  --se3: #362b48;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg1);
+  color: var(--text1);
+  font-size: 18px;
+  overflow-x: hidden;
+}
+.pfd{
+  font-family: 'Playfair Display', serif;
+}
+.title-pfd{
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+}
+.span-title{
+  color: var(--pr3)
+}
+/* .level{
+  z-index: 100;
+} */
+.cont{
+  overflow-x: hidden;
+  max-width: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NavBar */
+nav {
+  background-color: var(--pr3);
+  border-bottom: 1px solid var(--pr1);
+}
+a.link {
+  text-decoration: none;
+  color: var(--bg2);
+}
+.title {
+  font-weight: 200;
+}
+.logo {
+  font-weight: 100;
+  flex-grow: 1;
+  color: var(--pr1);;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 0 25px; 
+}
+
+.nav-ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-right: 50px;
+}
+.nav-li {
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  border-bottom: 2px solid var(--pr3);
+  transition-duration: 0.5s;
+  transition-property: border;
+}
+.nav-li:hover {
+  /* color: var(--pr); */
+  border-color: var(--pr1);
+}
+.lang > :last-child,
+.nav-ul > :last-child > a {
+  color: var(--pr1);
+}
+
+/* HERO */
+.hero {
+  color: var(--bg1);
+  background: var(--pr1);
+  background: linear-gradient(
+    -6deg,
+    var(--pr1) 0%,
+    var(--pr3) 90%
+  );
+
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 92%,
+    78% 78%,
+    54% 82%,
+    35% 95%,
+    16% 89%,
+    0 100%
+  );
+
+  position: relative;
+}
+.hero-tx {
+  padding: 0px 20px;
+}
+.heroOne {
+  /* background: var(--pr1); */
+  background: linear-gradient(
+    -6deg,
+    var(--pr1) 0%,
+    var(--pr3) 66%
+  );
+}
+
+/* SECTIONS */
+.one,
+.two {
+  background-color: var(--bg2);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.one > :first-child,
+.two > :first-child {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.one {
+  clip-path: polygon(
+    calc(100% - 97vw) 2vw,
+    100% 0,
+    100% 100%,
+    2vw calc(100% - 2vw)
+  );
+}
+
+.two {
+  clip-path: polygon(0 0, calc(100% - 2vw) 2vw, 97vw calc(100% - 2vw), 0 100%);
+}
+
+.three {
+  min-height: 300px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.three-tx {
+  background-color: var(--pr1);
+  padding: 30px 0;
+}
+.title-flex {
+  margin-bottom: 20px;
+  padding: 0 15px;
+
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  gap: 5px;
+}
+.title-flex > p {
+  background-color: var(--bg2);
+  border: 2px solid var(--bg1);
+  padding: 9px 20px;
+  font-size: 16px;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 100px;
+  z-index: -1;
+  background: var(--bg);
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 800px;
+  /* color: var(--ac); */
+  text-align: center;
+}
+footer {
+  height: 300px;
+  background-color: var(--text2);
+  color: var(--bg1);
+  display: grid;
+  place-items: center;
+  /* margin-top: 100px; */
+}
+
+@media (max-width: 700px) {
+  .nav-ul {
+    display: none;
+  }
+  .title-flex {
+    grid-auto-flow: row;
+  }
+}
+@media (min-width: 701px) {
+  .mt1{
+    margin-top: 20px;
+    border-top: 3px solid gold !important;
+  }
+  .mt2{
+    margin-top: 40px;
+    border-top: 3px solid silver !important;
+  }
+  .mt3{
+    margin-top: 60px;
+    border-top: 3px solid #CD7F32 !important;
+  }
+}
+@media (min-width: 1200px) {
+  .one {
+    clip-path: polygon(
+      calc(100% - 90vw) 2vw,
+      100% 0,
+      100% 100%,
+      9vw calc(100% - 2vw)
+    );
+  }
+  .two {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 10vw) 3vw,
+      89vw calc(100% - 2vw),
+      0 100%
+    );
+  }
+}
